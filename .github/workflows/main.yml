@@ -11,3 +11,6 @@ jobs:
     - name: print envvars
       id: hello
       uses: billglover/action-envvars@v1
+      run: |
+        echo "GITHUB_SHA_SHORT: $GITHUB_SHA_SHORT"
+        echo "GITHUB_SHA_SHORTEST: $GITHUB_SHA_SHORTEST"
