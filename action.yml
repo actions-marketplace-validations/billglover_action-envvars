@@ -1,0 +1,8 @@
+name: 'Set Useful Envvars'
+description: 'Set some useful environment variables'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'hash'  
+  color: 'gray-dark'

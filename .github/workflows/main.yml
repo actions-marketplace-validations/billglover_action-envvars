@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    name: demo
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+
+    - name: print envvars
+      id: hello
+      uses: billglover/action-envvars@v1
