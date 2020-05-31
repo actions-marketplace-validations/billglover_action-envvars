@@ -8,9 +8,10 @@ jobs:
     - name: checkout
       uses: actions/checkout@master
 
-    - name: print envvars
-      id: hello
+    - name: set envvars
       uses: billglover/action-envvars@v1
+
+    - name: print envvars
       run: |
         echo "GITHUB_SHA_SHORT: $GITHUB_SHA_SHORT"
         echo "GITHUB_SHA_SHORTEST: $GITHUB_SHA_SHORTEST"
