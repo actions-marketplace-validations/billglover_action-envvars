@@ -16,10 +16,21 @@ None
 ## Example usage
 
 ```yaml
-steps:
-- name: sha-short
-  uses: billglover/action-envvars@v2
-  run: |
-  echo "GITHUB_SHA_SHORT: $GITHUB_SHA_SHORT"
-  echo "GITHUB_SHA_SHORTEST: $GITHUB_SHA_SHORTEST"
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    name: demo
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+
+    - name: set envvars
+      uses: billglover/action-envvars@v1
+
+    - name: print envvars
+      run: |
+        echo "GITHUB_SHA_SHORT: $GITHUB_SHA_SHORT"
+        echo "GITHUB_SHA_SHORTEST: $GITHUB_SHA_SHORTEST"
 ```
